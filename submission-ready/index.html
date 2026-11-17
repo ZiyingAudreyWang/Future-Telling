@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dear Fridge — a gentle watercolor kitchen companion for remembering food and reducing waste.">
+  <title>My Fridge — Dear Fridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body data-page="fridge">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dear Fridge home">
+      <span class="brand-sprig" aria-hidden="true">❧</span>
+      <span>Dear Fridge</span>
+      <small>a little kitchen in 2040</small>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="fridge"><span>01</span> My Fridge</a>
+      <a href="recipes.html" data-page="recipes"><span>02</span> Recipe Book</a>
+      <a href="restock.html" data-page="restock"><span>03</span> Restock Basket</a>
+    </nav>
+    <button class="reset-button" type="button" data-reset-demo>Reset demo</button>
+  </header>
+
+  <main id="main">
+    <section class="fridge-intro page-intro">
+      <div>
+        <p class="eyebrow">My kitchen notebook · living inventory</p>
+        <h1>Dear Fridge, <em>what’s inside?</em></h1>
+        <p>A little kitchen that remembers what you have — one shelf, one meal, one gentle reminder at a time.</p>
+      </div>
+      <div class="fridge-tools">
+        <div class="view-switch" role="group" aria-label="Choose ingredient view">
+          <button type="button" class="active" data-view="inside" aria-pressed="true"><span aria-hidden="true">◌</span> Inside my fridge</button>
+          <button type="button" data-view="category" aria-pressed="false"><span aria-hidden="true">⌁</span> By category</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mode-shelf freshness-shelf" aria-label="Freshness overview">
+      <p class="freshness-label"><span aria-hidden="true">✦</span> Freshness</p>
+      <p id="mode-hint" class="mode-hint" aria-live="polite">Food nearing its date asks for attention; food in its best window is wrapped in a warm moving glow.</p>
+    </section>
+
+    <section id="inside-view" class="fridge-layout" aria-label="Inside my fridge view">
+      <div class="fridge-stage">
+        <div class="fridge-caption left" aria-hidden="true">tap a tiny ingredient</div>
+        <div id="fridge-whisper" class="fridge-whisper" aria-hidden="true"></div>
+        <div class="fridge-art-wrap">
+          <img class="fridge-art" src="fridge-full.png" alt="Open watercolor refrigerator filled with dairy, fruit, vegetables, leftovers, and frozen food">
+          <div id="hotspot-layer" class="hotspot-layer"></div>
+        </div>
+      </div>
+
+      <aside class="fridge-sidebar" aria-label="Ingredient details">
+        <div id="fridge-detail" class="paper-note welcome-note">
+          <div class="note-tape" aria-hidden="true"></div>
+          <p class="hand-label">Hello from your fridge!</p>
+          <h2>Every little ingredient has a place here.</h2>
+          <p>Click something in the watercolor fridge to read its date, storage condition, and what deserves attention first.</p>
+          <div class="welcome-doodles" aria-hidden="true">
+            <img src="assets/icons/strawberries.png" alt="">
+            <span>pick me</span>
+            <img src="assets/icons/milk.png" alt="">
+          </div>
+          <div class="note-rule"></div>
+          <p class="small-note">Your changes stay in this browser and travel with you across all three pages.</p>
+        </div>
+        <div class="sidebar-scrap" aria-hidden="true"><span>today’s thought</span>Use the tender things first.</div>
+      </aside>
+    </section>
+
+    <section id="category-view" class="category-view" aria-label="Ingredients by category" hidden></section>
+
+  </main>
+
+  <footer class="site-footer"><span>Dear Fridge</span><p>A softer future for everyday food.</p><span>Made with care, paper & pixels.</span></footer>
+  <script src="data.js?v=10"></script>
+  <script src="script.js?v=10"></script>
+  <script src="living-fridge.js?v=10"></script>
+</body>
+</html>

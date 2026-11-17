@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A warm hand-drawn shopping list that restocks only what your fridge needs.">
+  <title>Restock Basket — Dear Fridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body data-page="restock">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dear Fridge home"><span class="brand-sprig" aria-hidden="true">❧</span><span>Dear Fridge</span><small>a little kitchen in 2040</small></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="fridge"><span>01</span> My Fridge</a>
+      <a href="recipes.html" data-page="recipes"><span>02</span> Recipe Book</a>
+      <a href="restock.html" data-page="restock"><span>03</span> Restock Basket</a>
+    </nav>
+    <button class="reset-button" type="button" data-reset-demo>Reset demo</button>
+  </header>
+
+  <main id="main" class="restock-page">
+    <section class="restock-intro page-intro">
+      <div>
+        <p class="eyebrow">A note for the market</p>
+        <h1>A little <em>shopping list</em></h1>
+        <p>Only what you need, nothing more.</p>
+      </div>
+      <div class="basket-sketch" aria-hidden="true">
+        <span class="basket-handle"></span>
+        <span class="basket-body"><b id="basket-count">0</b></span>
+        <img src="assets/icons/carrots.png" alt="">
+        <img src="assets/icons/bread.png" alt="">
+      </div>
+    </section>
+
+    <section class="shopping-paper">
+      <div class="shopping-paper-header">
+        <div><p class="hand-label">Wednesday’s list</p><h2>For the fridge & pantry</h2></div>
+        <div class="manual-add">
+          <label for="manual-ingredient">Add something</label>
+          <select id="manual-ingredient"><option value="">Choose an ingredient…</option></select>
+          <button id="manual-add" class="paper-button" type="button">Add to list</button>
+        </div>
+      </div>
+      <ul id="shopping-list" class="shopping-list" aria-live="polite"></ul>
+      <div id="empty-list" class="empty-list" hidden>
+        <img src="assets/icons/apples.png" alt="Two watercolor apples">
+        <p class="hand-label">The page is clear.</p>
+        <h2>Your kitchen has enough for now.</h2>
+      </div>
+      <div class="shopping-footer">
+        <p><span aria-hidden="true">✦</span> Check the things you brought home, then tuck them into your fridge.</p>
+        <button id="purchase-button" class="paper-button primary" type="button">Mark selected as purchased</button>
+      </div>
+    </section>
+
+    <aside class="market-note">
+      <span class="note-pin" aria-hidden="true"></span>
+      <p class="hand-label">A small future</p>
+      <p>Suggestions come from your real demo inventory. “Shop now” opens a product search — this kitchen never pretends to buy for you.</p>
+    </aside>
+  </main>
+
+  <dialog id="purchase-dialog" class="small-dialog"><div class="purchase-summary paper-note"></div></dialog>
+  <footer class="site-footer"><span>Dear Fridge</span><p>A softer future for everyday food.</p><span>Page three of three.</span></footer>
+  <script src="data.js?v=10"></script>
+  <script src="script.js?v=10"></script>
+  <script src="restock.js?v=10"></script>
+</body>
+</html>

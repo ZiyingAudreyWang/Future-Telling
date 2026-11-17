@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A watercolor recipe book that cooks with the ingredients already in your fridge.">
+  <title>Recipe Book — Dear Fridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body data-page="recipes">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dear Fridge home"><span class="brand-sprig" aria-hidden="true">❧</span><span>Dear Fridge</span><small>a little kitchen in 2040</small></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="fridge"><span>01</span> My Fridge</a>
+      <a href="recipes.html" data-page="recipes"><span>02</span> Recipe Book</a>
+      <a href="restock.html" data-page="restock"><span>03</span> Restock Basket</a>
+    </nav>
+    <button class="reset-button" type="button" data-reset-demo>Reset demo</button>
+  </header>
+
+  <main id="main" class="recipe-page">
+    <section class="recipe-intro page-intro">
+      <div>
+        <p class="eyebrow">Recipe book · from the shelves</p>
+        <h1>What shall we <em>cook today?</em></h1>
+        <p>Let’s make something lovely with what we already have.</p>
+      </div>
+      <div class="intro-still-life" aria-hidden="true">
+        <span class="scribble-arrow">use soon</span>
+        <img src="assets/icons/mushrooms.png" alt="">
+        <img src="assets/icons/tomatoes.png" alt="">
+        <img src="assets/icons/spinach.png" alt="">
+      </div>
+    </section>
+
+    <section class="recipe-book-shell">
+      <div class="book-binding" aria-hidden="true"></div>
+      <div class="recipe-toolbar">
+        <p class="hand-label">Little bookmarks</p>
+        <div class="filter-row" role="group" aria-label="Filter recipes">
+          <button class="filter-tab active" type="button" data-filter="all" aria-pressed="true">All recipes</button>
+          <button class="filter-tab" type="button" data-filter="quick" aria-pressed="false">Quick meals</button>
+          <button class="filter-tab" type="button" data-filter="healthy" aria-pressed="false">Healthy</button>
+          <button class="filter-tab" type="button" data-filter="comfort" aria-pressed="false">Comfort food</button>
+          <button class="filter-tab" type="button" data-filter="use-soon" aria-pressed="false">Use soon</button>
+        </div>
+      </div>
+      <div id="recipe-list" class="recipe-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <dialog id="recipe-dialog" class="recipe-dialog"><div class="dialog-content"></div></dialog>
+  <dialog id="cook-dialog" class="small-dialog"><div class="cook-summary paper-note"></div></dialog>
+  <footer class="site-footer"><span>Dear Fridge</span><p>A softer future for everyday food.</p><span>Page two of three.</span></footer>
+  <script src="data.js?v=10"></script>
+  <script src="script.js?v=10"></script>
+  <script src="recipes.js?v=10"></script>
+</body>
+</html>
